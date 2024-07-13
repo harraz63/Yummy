@@ -95,8 +95,8 @@ body {
 /* Strat Media Query */
 @media (max-width: 768px) {
   .container {
-    width: 87%;
-    margin-left: 15%;
+    width: 86%;
+    margin-left: 14%;
   }
 }
 /* End Media Query */
