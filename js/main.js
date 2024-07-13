@@ -64,7 +64,7 @@ async function searchByName(name = "") {
     );
     const data = await response.json();
 
-    data ? displayMeals(data.meals) : displayMeals([]);
+    data ? displayMeals(data.meals.slice(0, 20)) : displayMeals([]);
     $(".loading-screen").addClass("d-none");
   } catch (error) {
     console.error(
@@ -84,7 +84,7 @@ async function searchByFirstLetter(letter) {
     );
     const data = await response.json();
 
-    data ? displayMeals(data.meals) : displayMeals([]);
+    data ? displayMeals(data.meals.slice(0, 20)) : displayMeals([]);
     $(".loading-screen").addClass("d-none");
   } catch (error) {
     console.error(
@@ -143,7 +143,7 @@ async function getCategorieMeals(category) {
     );
     const data = await response.json();
 
-    displayMeals(data.meals);
+    displayMeals(data.meals.slice(0, 20));
     $(".loading-screen").addClass("d-none");
   } catch (error) {
     console.error(
@@ -196,7 +196,7 @@ async function getAreaMeals(area) {
     );
     const data = await response.json();
 
-    displayMeals(data.meals);
+    displayMeals(data.meals.slice(0, 20));
     $(".loading-screen").addClass("d-none");
   } catch (error) {
     console.error(
@@ -253,7 +253,7 @@ async function getIngredientsMeals(ingredient) {
     );
     const data = await response.json();
 
-    displayMeals(data.meals);
+    displayMeals(data.meals.slice(0, 20));
     $(".loading-screen").addClass("d-none");
   } catch (error) {
     console.error(
